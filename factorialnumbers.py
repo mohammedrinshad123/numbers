@@ -1,9 +1,12 @@
+num = int(input("Enter a number: "))
 
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * factorial(n-1)
+factorial = 1
 
-num = 5
-print(f"Factorial of {num} is {factorial(num)}")
+if num < 0:
+    print("Factorial does not exist for negative numbers.")
+elif num == 0:
+    print("Factorial of 0 is 1.")
+else:
+    for i in range(1, num + 1):
+        factorial *= i
+    print(f"Factorial of {num} is {factorial}.")
